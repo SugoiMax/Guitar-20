@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Password protetta</title>
+</head>
+<body>
+    <h1>Password protetta</h1>
+	<p>Questa pagina è protetta da password. Inserisci la password corretta per accedere al contenuto.</p>
+	<form>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password">
+		<button type="button" onclick="checkPassword()">Accedi</button>
+	</form>
+
+	<script>
+		function checkPassword() {
+			var password = document.getElementById("password").value;
+			if (password == "Forelsket") {
+                window.location.href = "home.html";;
+			} else {
+				alert("Password errata. Riprova.");
+			}
+		}
+	</script>
+</body>
+</html>
+
